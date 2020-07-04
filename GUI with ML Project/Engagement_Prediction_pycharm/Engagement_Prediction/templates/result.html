@@ -1,0 +1,41 @@
+{% extends "bootstrap/base.html" %}
+{% block content %}
+
+<div class="container-fluid">
+	<div class="jumbotron">
+     <h2>Student Engagement Prediction Result is Perfect ....:</h2>
+     <h4>Using Deep Learning</h4>
+	</div>
+</div>
+
+<div class="container">
+	<br/>
+	<h1><label style="color:green">Student Engaged </label> = {{ eng }}</h1>
+	<h1><label style="color:red">Student Disengaged</label> = {{ dis }}</h1>
+</div>
+
+<br/>
+<br/>
+<div class="container">
+	<center><strong><h3>Pia Chart Diagram</h3></strong></center>
+	<br/>
+	<center><img src="{{ use_image1 }}"></center>
+</div>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+	<center><strong><h3>Histogram Diagram</h3></strong></center>
+	<br/>
+	<center><img src="{{ use_image2 }}"></center>
+</div>
+
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" type="text/css" href="{{url_for('.static', filename='css/styles.css')}}">
+
+{% endblock %}

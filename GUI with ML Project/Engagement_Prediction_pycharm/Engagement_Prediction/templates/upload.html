@@ -1,0 +1,33 @@
+{% extends "bootstrap/base.html" %}
+{% block content %}
+<div class="container-fluid">
+	<div class="jumbotron bg-dark text-white" style="background-color: dark-white">
+     <h2>Student Engagement Prediction</h2>
+     <h4>Using Deep Learning</h4>
+	</div>
+</div>
+
+<center>
+<div class="container">
+	<div class="row">
+		<h3><strong>Video Detected successfully ....</strong></h3>
+		<br/>
+		<h1>Prediction the Student Engagement ....</h1>
+
+		<form action="/predict" method="POST">
+		<br/>
+		<br/>
+		<button type="submit" class="btn btn-primary">Predict</button>
+  </form>
+
+  </div>
+</div>
+</center>
+
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+
+
+{% endblock %}

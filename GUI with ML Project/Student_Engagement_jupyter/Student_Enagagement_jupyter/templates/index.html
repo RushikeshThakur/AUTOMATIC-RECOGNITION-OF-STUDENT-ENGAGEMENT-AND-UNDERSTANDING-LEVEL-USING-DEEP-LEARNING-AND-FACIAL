@@ -1,0 +1,31 @@
+{% extends "bootstrap/base.html" %}
+{% block content %}
+<div class="container">
+	<div class="jumbotron bg-dark text-white" style="background-color: dark-white">
+     <h2>Student Engagement Prediction</h2>
+     <h4>Using Deep Learning</h4>
+	</div>
+</div>
+
+<center>
+<div class="container">
+	<div class="row">
+		
+	<form action="/uploader" method="POST" enctype="multipart/form-data">
+		<input type="file" name="file1">
+		<br/>
+		<br/>
+		<button type="submit" class="btn btn-primary" id="press">Submit</button>
+  </form>
+
+  </div>
+</div>
+</center>
+
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" type="text/css" href="{{url_for('.static', filename='css/styles.css')}}">>
+
+{% endblock %}
